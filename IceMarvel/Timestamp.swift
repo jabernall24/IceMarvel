@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Timestamp {
+struct Timestamp {
     func timestamp() -> String {
         let date = Date()
         return String(describing: date.timeIntervalSinceNow)
