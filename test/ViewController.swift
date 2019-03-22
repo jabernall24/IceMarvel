@@ -15,29 +15,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        iceMarvel.getEvents { (result) in
+//        iceMarvel.getSeries { (result) in
 //            switch result {
-//            case .success(let events):
-//                print(events.count)
-//                for event in events {
-//                    print(event?.title)
+//            case .success(let series):
+//                print(series.count)
+//                for s in series {
+//                    print(s?.title)
 //                }
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getEventBy(id: "116") { (result) in
+//        iceMarvel.getASeriesBy(id: "19501") { (result) in
 //            switch result {
-//            case .success(let event):
-//                print(event?.title)
-//                print(event?.getThumbnailWith(size: .detail))
+//            case .success(let series):
+//                print(series?.startYear)
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getEventCharactersBy(id: "116") { (result) in
+//        iceMarvel.getASeriesCharactersBy(id: "19244") { (result) in
 //            switch result {
 //            case .success(let characters):
 //                print(characters.count)
@@ -49,7 +48,7 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-//        iceMarvel.getEventComicsBy(id: "116") { (result) in
+//        iceMarvel.getASeriesComicsBy(id: "19244") { (result) in
 //            switch result {
 //            case .success(let comics):
 //                print(comics.count)
@@ -61,7 +60,7 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-//        iceMarvel.getEventCreatorsBy(id: "116") { (result) in
+//        iceMarvel.getASeriesCreatorsBy(id: "19244") { (result) in
 //            switch result {
 //            case .success(let creators):
 //                print(creators.count)
@@ -73,19 +72,19 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-//        iceMarvel.getEventSeriesBy(id: "116") { (result) in
+//        iceMarvel.getASeriesEventsBy(id: "19245") { (result) in
 //            switch result {
-//            case .success(let series):
-//                print(series.count)
-//                for s in series {
-//                    print(s?.id)
+//            case .success(let events):
+//                print(events.count)
+//                for event in events {
+//                    print(event?.id)
 //                }
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getEventStoriesBy(id: "116") { (result) in
+//        iceMarvel.getASeriesStoriesBy(id: "19245") { (result) in
 //            switch result {
 //            case .success(let stories):
 //                print(stories.count)
