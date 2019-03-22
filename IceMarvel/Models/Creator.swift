@@ -87,4 +87,52 @@ struct Creator {
             }
         }
     }
+    
+    func getThumbnailWith(size: MarvelImageSize) -> String{
+        let errorMsg = "Unable to retrieve image url. "
+        guard let p = path else { return errorMsg }
+        guard let e = ext else { return errorMsg }
+        switch size {
+        case .detail:
+            return "\(p)/detail.\(e)"
+        case .portrait_small:
+            return "\(p)/portrait_small.\(e)"
+        case .portrait_medium:
+            return "\(p)/portrait_medium.\(e)"
+        case .portrait_xlarge:
+            return "\(p)/portrait_xlarge.\(e)"
+        case .portrait_fantastic:
+            return "\(p)/portrait_fantastic.\(e)"
+        case .portrait_uncanny:
+            return "\(p)/portrait_uncanny.\(e)"
+        case .portrait_incredible:
+            return "\(p)/portrait_incredible.\(e)"
+        case .standard_small:
+            return "\(p)/standard_small.\(e)"
+        case .standard_medium:
+            return "\(p)/standard_medium.\(e)"
+        case .standard_large:
+            return "\(p)/standard_large.\(e)"
+        case .standard_xlarge:
+            return "\(p)/standard_xlarge.\(e)"
+        case .standard_fantastic:
+            return "\(p)/standard_fantastic.\(e)"
+        case .standard_amazing:
+            return "\(p)/standard_amazing.\(e)"
+        case .landscape_small:
+            return "\(p)/landscape_small.\(e)"
+        case .landscape_medium:
+            return "\(p)/landscape_medium.\(e)"
+        case .landscape_large:
+            return "\(p)/landscape_large.\(e)"
+        case .landscape_xlarge:
+            return "\(p)/landscape_xlarge.\(e)"
+        case .landscape_amazing:
+            return "\(p)/landscape_amazing.\(e)"
+        case .landscape_incredible:
+            return "\(p)/landscape_incredible.\(e)"
+        case .full_size:
+            return "\(p).\(e)"
+        }
+    }
 }
