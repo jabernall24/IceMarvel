@@ -15,7 +15,53 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        iceMarvel.getCreators { (result) in
+//        iceMarvel.getEvents { (result) in
+//            switch result {
+//            case .success(let events):
+//                print(events.count)
+//                for event in events {
+//                    print(event?.title)
+//                }
+//            case .failure(let error):
+//                print(error?.localizedDescription)
+//            }
+//        }
+        
+//        iceMarvel.getEventBy(id: "116") { (result) in
+//            switch result {
+//            case .success(let event):
+//                print(event?.title)
+//                print(event?.getThumbnailWith(size: .detail))
+//            case .failure(let error):
+//                print(error?.localizedDescription)
+//            }
+//        }
+        
+//        iceMarvel.getEventCharactersBy(id: "116") { (result) in
+//            switch result {
+//            case .success(let characters):
+//                print(characters.count)
+//                for character in characters {
+//                    print(character?.name)
+//                }
+//            case .failure(let error):
+//                print(error?.localizedDescription)
+//            }
+//        }
+        
+//        iceMarvel.getEventComicsBy(id: "116") { (result) in
+//            switch result {
+//            case .success(let comics):
+//                print(comics.count)
+//                for comic in comics {
+//                    print(comic?.title)
+//                }
+//            case .failure(let error):
+//                print(error?.localizedDescription)
+//            }
+//        }
+        
+//        iceMarvel.getEventCreatorsBy(id: "116") { (result) in
 //            switch result {
 //            case .success(let creators):
 //                print(creators.count)
@@ -27,57 +73,25 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-//        iceMarvel.getCreatorByID("7646") { (result) in
-//            switch result {
-//            case .success(let creator):
-//                print(creator?.fullName)
-//                print(creator?.events)
-//                print(creator?.getThumbnailWith(size: .detail))
-//            case .failure(let error):
-//                print(error?.localizedDescription)
-//            }
-//        }
-        
-//        iceMarvel.getCreatorComicsByID("7646") { (result) in
-//            switch result {
-//            case .success(let comics):
-//                print(comics.count)
-//                print(comics[0]?.id)
-//            case .failure(let error):
-//                print(error?.localizedDescription)
-//            }
-//        }
-        
-//        iceMarvel.getCreatorEventsByID("5977") { (result) in
-//            switch result {
-//            case .success(let events):
-//                print(events.count)
-//                print(events[0]?.title)
-//                print(events[0]?.getThumbnailWith(size: .detail))
-//            case .failure(let error):
-//                print(error?.localizedDescription)
-//            }
-//        }
-        
-//        iceMarvel.getCreatorSeriesByID("5977") { (result) in
+//        iceMarvel.getEventSeriesBy(id: "116") { (result) in
 //            switch result {
 //            case .success(let series):
 //                print(series.count)
-//                print(series[0]?.title)
-//                print(series[0]?.rating)
-//                print(series[0]?.getThumbnailWith(size: .detail))
+//                for s in series {
+//                    print(s?.id)
+//                }
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getCreatorStoriesByID("5977") { (result) in
+//        iceMarvel.getEventStoriesBy(id: "116") { (result) in
 //            switch result {
 //            case .success(let stories):
 //                print(stories.count)
-//                print(stories[0]?.title)
-//                print(stories[0]?.characters.count)
-//                print(stories[0]?.id)
+//                for story in stories {
+//                    print(story?.title)
+//                }
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
