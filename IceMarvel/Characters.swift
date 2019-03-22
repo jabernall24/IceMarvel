@@ -12,7 +12,7 @@ extension IceMarvel {
 /*
     Fetches lists of comic characters.
 */
-    func getCharacters(completionHandler: @escaping(Result<[Character?], Error?>) -> (), offset: Int = 0, limit: Int = 20, orderBy: CharacterOrderBy = .name){
+    func getCharacters(offset: Int = 0, limit: Int = 20, orderBy: CharacterOrderBy = .name, completionHandler: @escaping(Result<[Character?], Error?>) -> ()){
         let url = getCharactersURL(path: "/v1/public/characters", offset: offset, limit: limit, orderBy: orderBy)
         let request = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 10)
         
@@ -156,7 +156,7 @@ extension IceMarvel {
         task.resume()
     }
     
-    func getCharactersURL(path: String, offset: Int = 0, limit: Int = 20, orderBy: CharacterOrderBy = .name) -> URL {
+    fileprivate func getCharactersURL(path: String, offset: Int = 0, limit: Int = 20, orderBy: CharacterOrderBy = .name) -> URL {
         IceMarvel.ts = Timestamp().timestamp()
         IceMarvel.hash = (IceMarvel.ts + IceMarvel.privateKey + IceMarvel.publicKey).md5()
         
@@ -193,5 +193,12 @@ extension IceMarvel {
         }
         components.queryItems = queryItems
         return components.url!
+    }
+    
+    enum CharacterOrderBy {
+        case name
+        case modified
+        case nameDescending
+        case modifiedDescending
     }
 }

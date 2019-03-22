@@ -10,7 +10,7 @@ import Foundation
 
 class IceMarvel {
     
-    static let baseURL = "https://gateway.marvel.com"
+    static let baseURL = "https://gateway.marvel.com/v1/public"
     static var publicKey = ""
     static var privateKey = ""
     static var ts = ""

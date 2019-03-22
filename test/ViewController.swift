@@ -15,71 +15,66 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        iceMarvel.getCharacters { (result) in
-//            switch result {
-//            case .success(let characters):
-//                for character in characters{
-//                    if let name = character?.name {
-//                        print("\(name)\t\(String(describing: character?.detail))\t\(String(describing: character?.wiki))\t\(String(describing: character?.comicLink))")
-//                    }
-//                }
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        
-//        iceMarvel.getCharacterBy(id: "1011334") { (result) in
-//            switch result {
-//            case .success(let character):
-//                print(character?.name)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        
-//        iceMarvel.getCharacterComicsBy(id: "1011334") { (result) in
+//        iceMarvel.getComics { (result) in
 //            switch result {
 //            case .success(let comics):
-//                print(comics[0]!.creators)
+//                print(comics[0]?.pageCount)
+//                print(comics[0]?.title)
 //            case .failure(let error):
-//                print(error)
+//                print(error?.localizedDescription ?? "Unknown error")
 //            }
 //        }
         
-//        iceMarvel.getCharacterEventsBy(id: "1009148") { (result) in
-//            switch result{
-//            case .success(let events):
-//                events.forEach({ (event) in
-//                    if let characters = event?.characters {
-//                        for character in characters {
-//                            print(character)
-//                        }
-//                    }
-//                })
-//            case .failure(let error):
-//                print(error?.localizedDescription)
-//            }
-//        }
-        
-//        iceMarvel.getCharacterSeriesBy(id: "1009148") { (result) in
+//        iceMarvel.getComicByID("27238") { (result) in
 //            switch result {
-//            case .success(let series):
-//                for serie in series {
-//                    if let m_serie = serie {
-//                        print(m_serie.creators)
-//                    }
-//                }
+//            case .success(let comic):
+//                print(comic?.diamondCode ?? "No Diamond code")
+//                print(comic?.unlimitedDate ?? "No unlimited date")
+//                print(comic?.digitalId ?? "No digital ID")
+//                print(comic?.id ?? "No id")
+//                print(comic?.title ?? "No title")
+//                print(comic?.purchaseURL ?? "No purchase url")
+//            case .failure(let error):
+//                print(error?.localizedDescription ?? "Unknown error")
+//            }
+//        }
+        
+//        iceMarvel.getComicCharactersByID("27238") { (result) in
+//            switch result {
+//            case .success(let characters):
+//                print(characters.count)
+//                print(characters[0]?.comicLink)
+//                print(characters[0]?.name)
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getCharacterStoriesBy(id: "1009148") { (result) in
+//        iceMarvel.getComicCreatorsByID("27238") { (result) in
+//            switch result {
+//            case .success(let creators):
+//                print(creators.count)
+//                print(creators[0]?.fullName)
+//                print(creators[0]?.stories)
+//            case .failure(let error):
+//                print(error?.localizedDescription)
+//            }
+//        }
+        
+//        iceMarvel.getComicEventsByID("37507") { (result) in
+//            switch result {
+//            case .success(let events):
+//                print(events.count)
+//            case .failure(let error):
+//                print(error?.localizedDescription)
+//            }
+//        }
+        
+//        iceMarvel.getComicStoriesByID("37507") { (result) in
 //            switch result {
 //            case .success(let stories):
-//                for story in stories {
-//                    print(story?.title)
-//                }
+//                print(stories.count)
+//                print(stories[0]?.title)
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
