@@ -15,28 +15,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        iceMarvel.getSeries { (result) in
+//        iceMarvel.getStories(offset: 300, limit: 100) { (result) in
 //            switch result {
-//            case .success(let series):
-//                print(series.count)
-//                for s in series {
-//                    print(s?.title)
+//            case .success(let stories):
+//                for story in stories {
+//                    if (story?.events.count)! > 0 {
+//                        print(story?.id)
+//                    }
 //                }
+//                print("done")
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getASeriesBy(id: "19501") { (result) in
+//        iceMarvel.getStoryBy(id: "30") { (result) in
 //            switch result {
-//            case .success(let series):
-//                print(series?.startYear)
+//            case .success(let story):
+//                print(story?.title)
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getASeriesCharactersBy(id: "19244") { (result) in
+//        iceMarvel.getStoryCharactersBy(id: "236") { (result) in
 //            switch result {
 //            case .success(let characters):
 //                print(characters.count)
@@ -48,19 +50,19 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-//        iceMarvel.getASeriesComicsBy(id: "19244") { (result) in
+//        iceMarvel.getStoryComicsBy(id: "30") { (result) in
 //            switch result {
 //            case .success(let comics):
 //                print(comics.count)
 //                for comic in comics {
-//                    print(comic?.title)
+//                    print(comic?.printPrice)
 //                }
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getASeriesCreatorsBy(id: "19244") { (result) in
+//        iceMarvel.getStoryCreatorsBy(id: "10") { (result) in
 //            switch result {
 //            case .success(let creators):
 //                print(creators.count)
@@ -72,24 +74,24 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-//        iceMarvel.getASeriesEventsBy(id: "19245") { (result) in
+//        iceMarvel.getStoryEventsBy(id: "543") { (result) in
 //            switch result {
 //            case .success(let events):
 //                print(events.count)
 //                for event in events {
-//                    print(event?.id)
+//                    print(event?.title)
 //                }
 //            case .failure(let error):
 //                print(error?.localizedDescription)
 //            }
 //        }
         
-//        iceMarvel.getASeriesStoriesBy(id: "19245") { (result) in
+//        iceMarvel.getStorySeriesBy(id: "543") { (result) in
 //            switch result {
-//            case .success(let stories):
-//                print(stories.count)
-//                for story in stories {
-//                    print(story?.title)
+//            case .success(let series):
+//                print(series.count)
+//                for s in series {
+//                    print(s?.id)
 //                }
 //            case .failure(let error):
 //                print(error?.localizedDescription)

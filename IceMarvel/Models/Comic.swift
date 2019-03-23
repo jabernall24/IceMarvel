@@ -39,8 +39,8 @@ struct Comic {
     var unlimitedDate: String?
     var digitalPurchaseDate: String?
     
-    var printPrice: Float?
-    var digitalPrice: Float?
+    var printPrice: Double?
+    var digitalPrice: Double?
     
     private var path: String?
     private var ext: String?
@@ -138,9 +138,9 @@ struct Comic {
                 if let type = price["type"] as? String {
                     switch type {
                     case "printPrice":
-                        printPrice = price["price"] as? Float
+                        printPrice = price["price"] as? Double
                     case "digitalPurchasePrice":
-                        digitalPrice = price["price"] as? Float
+                        digitalPrice = price["price"] as? Double
                     default:
                         break
                     }
